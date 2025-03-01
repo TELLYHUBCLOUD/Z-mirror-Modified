@@ -230,7 +230,7 @@ async def start(client, message):
         start_string = "Start me in DM, not in the group.\n" \
                        f"cc: {tag}"
     buttons = ButtonMaker()
-    buttons.url_button("Join Channel 🚀", "https://t.me/@TELLYMIRROR", position="header")
+    buttons.url_button("Join Channel 🚀", "https://t.me/TELLYMIRROR", position="header")
     buttons.url_button("Owner ☀️", "https://t.me/TELLYHUBOWNER", position="header")
     buttons.url_button("Repo 🌐", "https://github.com/TELLYHUBCLOUD/Z-Mirror-Modified", position="footer")
     reply_markup = buttons.build_menu(3)

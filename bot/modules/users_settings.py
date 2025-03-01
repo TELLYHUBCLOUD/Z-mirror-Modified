@@ -421,7 +421,7 @@ async def update_user_settings(query):
         button
     ) = await get_user_settings(query.from_user)
     user_id = query.from_user.id
-    tpath = "https://graph.org/JetMirror-07-24-2"
+    tpath = "https://ibb.co/yntKnnYc"
     media = (
         f"Thumbnails/{user_id}.jpg"
         if os_path.exists(f"Thumbnails/{user_id}.jpg")
@@ -450,7 +450,7 @@ async def user_settings(client, message):
         msg,
         button
     ) = await get_user_settings(from_user)
-    tpath = "https://graph.org/JetMirror-07-24-2"
+    tpath = "https://ibb.co/yntKnnYc"
     media = (
         f"Thumbnails/{user_id}.jpg"
         if os_path.exists(f"Thumbnails/{user_id}.jpg")

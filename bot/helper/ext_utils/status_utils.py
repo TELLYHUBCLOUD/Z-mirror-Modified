@@ -203,7 +203,8 @@ async def get_readable_message(
         status="All",
         page_step=1
     ):
-    msg = "<blockquote><a href="https://t.me/TELLYMIRROR"><b>⚡ POWERED BY TELLY MIRROR 🤖</b></a></blockquote>"
+  ##  msg = "<a href="https://t.me/TELLYMIRROR"><b>⚡ POWERED BY TELLY MIRROR 🤖</b></a>\n"
+    msg = "<a href='https://t.me/TELLYMIRROR'>⚡ POWERED BY TELLY MIRROR 🤖</a>\n"
     button = None
 
     tasks = await sync_to_async(

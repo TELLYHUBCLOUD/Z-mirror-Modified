@@ -191,9 +191,9 @@ def get_progress_bar_string(pct):
         100
     )
     cFull = int(p // 10)
-    p_str = "★" * cFull
-    p_str += "✩" * (10 - cFull)
-    return f"{p_str}"
+    p_str = "■" * cFull
+    p_str += "▢" * (10 - cFull)
+    return f'<p><a href="https://t.me/TELLYMIRROR">{p_str}</a></p>'
 
 
 async def get_readable_message(
@@ -203,7 +203,7 @@ async def get_readable_message(
         status="All",
         page_step=1
     ):
-    msg = "<a href='https://t.me/JetMirror'>𝑩𝒐𝒕 𝒃𝒚 🚀 𝑱𝒆𝒕-𝑴𝒊𝒓𝒓𝒐𝒓</a>\n"
+    msg = "<blockquote><a href="https://t.me/TELLYMIRROR"><b>⚡ POWERED BY TELLY MIRROR 🤖</b></a></blockquote>"
     button = None
 
     tasks = await sync_to_async(

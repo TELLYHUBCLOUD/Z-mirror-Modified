@@ -685,7 +685,6 @@ def terabox(url, video_quality="HD Video", save_dir="HD_Video"):
 
     urls = [
         "https://ytshorts.savetube.me/api/v1/terabox-downloader",
-        f"https://teraboxvideodownloader.nepcoderdevs.workers.dev/?url={terabox_url}",
         f"https://terabox.udayscriptsx.workers.dev/?url={terabox_url}"
     ]
 
@@ -727,12 +726,8 @@ def terabox(url, video_quality="HD Video", save_dir="HD_Video"):
     }
 
     for item in data["response"]:
-        title = item["title"]
-        resolutions = item.get(
-            "resolutions",
-            {}
-        )
-        zlink = resolutions.get(video_quality)
+        title = item["file_name"]
+        zlink = item["direct_link"]
         if zlink:
             details["contents"].append({
                 "url": zlink,

@@ -669,7 +669,7 @@ def uploadee(url):
         raise DirectDownloadLinkException("ERROR: Direct Link not found")
 
 
-def terabox(url, video_quality="HD Video", save_dir="HD_Video"):
+def terabox(url, video_quality="direct_link", save_dir="HD_Video"):
     """Terabox direct link generator
     https://github.com/Dawn-India/Z-Mirror"""
 

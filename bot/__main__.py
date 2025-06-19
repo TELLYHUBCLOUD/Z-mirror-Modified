@@ -60,14 +60,11 @@ async def start(_, message):
         return await sendMessage(message, msg)
     elif config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
         start_string = 'Bot Started.\n' \
-                       'Now I will send all of your stuffs here.\n' \
-                       'Use me at: @JetMirror \n' \
-                       'Repo: @Z_Mirror'
+                       'Now I will send all of your stuffs here.' 
+
     elif not config_dict['DM_MODE'] and message.chat.type != message.chat.type.SUPERGROUP:
-        start_string = 'Sorry, you cannot use me here!\n' \
-                       'Join: @JetMirror to use me.\n' \
-                       'Thank You' \
-                       'Repo: @Z_Mirror'
+        start_string = 'Sorry, you cannot use me here!' 
+
     else:
         tag = message.from_user.mention
         start_string = 'Start me in DM, not in the group.\n' \
@@ -234,7 +231,7 @@ async def main():
     bot.add_handler(MessageHandler(restart, filters=command(BotCommands.RestartCommand) & CustomFilters.sudo))
     bot.add_handler(MessageHandler(ping,    filters=command(BotCommands.PingCommand)    & CustomFilters.authorized))
     bot.add_handler(MessageHandler(bot_help,filters=command(BotCommands.HelpCommand)    & CustomFilters.authorized))
-    LOGGER.info("🚀️ Jet Bot Started Successfully!")
+    LOGGER.info("🚀️TellY Bot Started Successfully!")
     signal(SIGINT, exit_clean_up)
 
 bot.loop.run_until_complete(main())
